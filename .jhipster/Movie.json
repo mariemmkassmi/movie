@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20230706073513",
+  "entityTableName": "movie",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Duration"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "language",
+      "fieldType": "Langue",
+      "fieldValues": "Francais,Anglais,Arabe"
+    },
+    {
+      "fieldName": "imageUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publishDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "name": "Movie",
+  "relationships": [
+    {
+      "otherEntityName": "staff",
+      "otherEntityRelationshipName": "movie",
+      "relationshipName": "membreStaff",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "movie",
+      "relationshipName": "category",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

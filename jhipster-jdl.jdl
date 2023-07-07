@@ -1,0 +1,28 @@
+entity Staff{
+role Role,
+firstName String,
+lastName String
+}
+enum Role{
+Director, Author, Actor
+}
+entity Movie {
+  name String,
+  duration Duration,
+  description TextBlob ,
+  language Langue,
+  imageUrl String ,
+  publishDate ZonedDateTime
+}
+entity Category{
+name String,
+description String
+}
+enum Langue{
+Francais, Anglais, Arabe
+}
+relationship ManyToMany {
+  Movie{membreStaff} to Staff{movie}
+  Movie{category} to Category{movie}
+}
+service Staff, Movie, Category with serviceClass
