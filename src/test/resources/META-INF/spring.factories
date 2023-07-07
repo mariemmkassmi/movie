@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory=\
+tn.cs.movie.config.SqlTestContainersSpringContextCustomizerFactory
